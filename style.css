@@ -991,3 +991,260 @@ body{
 html {
     scroll-behavior: smooth;
 }
+/* =========================================
+        АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Главный экран */
+    .hero {
+        height: 100svh;
+        min-height: 600px;
+        padding-top: 0;
+
+        background-size: auto 100%;
+        background-position: center center;
+    }
+
+    /* Затемнение */
+    .overlay {
+        background: rgba(0, 0, 0, 0.20);
+    }
+
+    /* Контейнер */
+    .container {
+        width: 92%;
+    }
+
+    /* Меню */
+    .header {
+        padding: 20px 0;
+    }
+
+    .header-container {
+        width: 100%;
+    }
+
+    .menu {
+        top: 20px;
+        left: 50%;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 12px;
+        letter-spacing: .5px;
+    }
+
+    .menu a::after {
+        bottom: -5px;
+    }
+
+    /* Лоадер */
+    .loader-logo {
+        width: 190px;
+        max-width: 70vw;
+    }
+
+    /* Кнопки */
+    .hero-buttons {
+        margin-top: 25px;
+    }
+
+    .btn {
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+
+    /* Музыка */
+    #musicBtn {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 23px;
+    }
+
+    /* Отзывы */
+    .reviews {
+        padding: 40px 10px;
+    }
+
+    .reviews img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* Оставить отзыв */
+    .leave-review {
+        padding: 60px 15px;
+    }
+
+    .leave-review h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .leave-review input,
+    .leave-review textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        padding: 15px 18px;
+    }
+
+    #reviewBtn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Окно авторизации */
+    .modal-content {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .modal-content h3 {
+        font-size: 20px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-buttons button {
+        width: 100%;
+    }
+
+    /* О статуэтке */
+    .about-page {
+        padding: 120px 0 50px;
+    }
+
+    .about-page h1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .about-photo img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .about-text {
+        padding: 25px 20px;
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .about-text p {
+        margin-bottom: 25px;
+    }
+
+    /* Характеристики */
+    .specs {
+        padding: 60px 0;
+    }
+
+    .specs h2 {
+        font-size: 34px;
+        margin-bottom: 35px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .spec-card {
+        padding: 25px;
+    }
+
+    .spec-card p {
+        font-size: 24px;
+    }
+
+    /* Галерея */
+    .gallery-page {
+        padding: 70px 0;
+    }
+
+    .gallery-page h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-grid img:hover {
+        transform: none;
+    }
+
+    /* Заказать Нику */
+    .contacts-page {
+        padding: 120px 15px 70px;
+    }
+
+    .contacts-page h1 {
+        font-size: 40px;
+    }
+
+    .contacts-subtitle {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-card p {
+        font-size: 18px;
+    }
+
+    .back-home {
+        padding: 50px 15px;
+    }
+
+    .btn-back {
+        padding: 15px 35px;
+    }
+}
+
+
+/* Очень маленькие телефоны */
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .about-page h1,
+    .contacts-page h1 {
+        font-size: 32px;
+    }
+
+}
