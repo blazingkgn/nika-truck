@@ -3,267 +3,162 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NIKA TRUCK</title>
+<title>NIKA TRUCK</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
-
-
-    <!-- ==============================
-         HEADER
-    ============================== -->
-
     <header class="header">
 
-        <div class="header-container">
 
-            <nav class="menu">
+    <div class="header-container">
 
-                <a href="about.html">
-                    О статуэтке
-                </a>
 
-                <a href="#gallery">
-                    Галерея
-                </a>
+        
 
-                <a href="#order">
-                    Заказать Нику
-                </a>
 
-            </nav>
+        <nav class="menu">
 
-        </div>
+    <a href="about.html">О статуэтке</a>
 
-    </header>
+    <a href="#gallery">Галерея</a>
+
+    <a href="#order">Заказать Нику</a>
 
 
 
-    <!-- ==============================
-         LOADER
-         logo.png — заставка при входе
-    ============================== -->
+</nav>
 
-    <div class="loader">
-
-        <img
-            src="images/logo.png"
-            class="loader-logo"
-            alt="NIKA TRUCK"
-        >
 
     </div>
 
 
-
-    <!-- ==============================
-         HERO
-    ============================== -->
-
-    <section class="hero">
-
-        <!-- Затемнение -->
-        <div class="overlay"></div>
+</header>
 
 
-        <!-- КамАЗ -->
-        <img
-            src="images/kamaz.png"
-            class="hero-kamaz"
-            alt="КамАЗ"
-        >
+<div class="loader">
+
+    <img src="images/logo.png" class="loader-logo">
+
+</div>
 
 
-        <!-- Статуэтка Ника -->
-        <img
-            src="images/nika.png"
-            class="hero-nika"
-            alt="Статуэтка Ника"
-        >
+<div class="hero">
+
+    <div class="overlay"></div>
 
 
-        <!-- Логотип на самом сайте -->
-        <img
-            src="images/site-logo.png"
-            class="hero-logo"
-            alt="NIKA TRUCK"
-        >
-
-    </section>
+    <div class="container">
 
 
-
-    <!-- ==============================
-         REVIEWS
-    ============================== -->
-
-    <section class="reviews">
-
-        <img
-            src="images/reviews-section.png"
-            alt="Отзывы покупателей"
-        >
-
-    </section>
+</div>
 
 
+</div>
+<section class="reviews">
 
-    <!-- ==============================
-         MUSIC
-    ============================== -->
+    <img src="images/reviews-section.png" alt="Отзывы покупателей">
 
-    <audio
-        id="bgMusic"
-        loop
-    >
+</section>
+<section class="leave-review">
 
-        <source
-            src="music/theme.mp3"
-            type="audio/mpeg"
-        >
+    <h2>Оставить отзыв</h2>
 
-    </audio>
+    <input type="text" placeholder="Ваше имя">
+
+    <textarea placeholder="Ваш отзыв"></textarea>
+
+    <button id="reviewBtn">Отправить отзыв</button>
+
+</section>
 
 
-    <button
-        id="musicBtn"
-        type="button"
-        aria-label="Включить или выключить музыку"
-    >
-        ♫
-    </button>
+<div class="modal" id="authModal">
+
+    <div class="modal-content">
+
+        <h3>Для продолжения необходимо авторизоваться</h3>
+
+        <div class="modal-buttons">
+
+            <button id="loginBtn">Войти</button>
+
+            <button id="closeModal">Отмена</button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
-    <!-- ==============================
-         ORDER
-    ============================== -->
-
-    <section
-        class="contacts-page"
-        id="order"
-    >
-
-        <div class="container">
 
 
-            <h1>
-                Заказать Нику
-            </h1>
+<audio id="bgMusic" loop>
+    <source src="music/theme.mp3" type="audio/mpeg">
+</audio>
 
+<button id="musicBtn">♫</button>
+<script src="script.js"></script>
 
-            <p class="contacts-subtitle">
+<section class="contacts-page" id="order">
 
-                Если вы хотите заказать статуэтку
-                или у вас появились вопросы
-                по изготовлению и срокам,
-                свяжитесь с нами любым удобным способом.
+    <div class="container">
 
-            </p>
+        <h1>Заказать Нику</h1>
 
+        <p class="contacts-subtitle">
+            Если вы хотите заказать статуэтку или у вас появились вопросы
+            по изготовлению и срокам, свяжитесь с нами любым удобным способом.
+        </p>
 
+        <div class="contacts-grid">
 
-            <div class="contacts-grid">
+            <div class="contact-card">
 
+                <img src="images/telegram.png" class="contact-icon" alt="Telegram">
 
-                <!-- ==============================
-                     TELEGRAM
-                ============================== -->
+                <p>@olegebk</p>
 
-                <div class="contact-card">
+                <a href="https://t.me/olegebk" target="_blank">
+                    Написать
+                </a>
 
-                    <img
-                        src="images/telegram.png"
-                        class="contact-icon"
-                        alt="Telegram"
-                    >
+            </div>
 
-                    <p>
-                        @olegebk
-                    </p>
+            <div class="contact-card">
 
-                    <a
-                        href="https://t.me/olegebk"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Написать
-                    </a>
+                <img src="images/max.png" class="contact-icon" alt="MAX">
 
-                </div>
+                <p>@olegebk</p>
 
+                <a href="#">
+                    Написать
+                </a>
 
+            </div>
 
-                <!-- ==============================
-                     MAX
-                ============================== -->
+            <div class="contact-card">
 
-                <div class="contact-card">
+                <h2>E-mail</h2>
 
-                    <img
-                        src="images/max.png"
-                        class="contact-icon"
-                        alt="MAX"
-                    >
-
-                    <p>
-                        @olegebk
-                    </p>
-
-                    <a href="#">
-                        Написать
-                    </a>
-
-                </div>
-
-
-
-                <!-- ==============================
-                     EMAIL
-                ============================== -->
-
-                <div class="contact-card">
-
-                    <h2>
-                        E-mail
-                    </h2>
-
-                    <p>
-                        info@nika-truck.ru
-                    </p>
-
-                </div>
-
+                <p>info@nika-truck.ru</p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-
-
-    <!-- ==============================
-         JAVASCRIPT
-    ============================== -->
-
-    <script src="script.js"></script>
-
-
+</section>
 </body>
 
 </html>
