@@ -3,136 +3,194 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NIKA TRUCK</title>
+    <title>NIKA TRUCK</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
     <header class="header">
 
+        <div class="header-container">
 
-    <div class="header-container">
+            <nav class="menu">
+
+                <a href="about.html">О статуэтке</a>
+
+                <a href="#gallery">Галерея</a>
+
+                <a href="#order">Заказать Нику</a>
+
+            </nav>
+
+        </div>
+
+    </header>
 
 
-        
+    <!-- ==============================
+         LOADER
+    ============================== -->
 
+    <div class="loader">
 
-        <nav class="menu">
-
-    <a href="about.html">О статуэтке</a>
-
-    <a href="#gallery">Галерея</a>
-
-    <a href="#order">Заказать Нику</a>
-
-
-
-</nav>
-
+        <img
+            src="images/logo.png"
+            class="loader-logo"
+            alt="NIKA TRUCK"
+        >
 
     </div>
 
 
-</header>
+    <!-- ==============================
+         HERO
+    ============================== -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="container">
+
+        </div>
+
+    </section>
 
 
-<div class="loader">
+    <!-- ==============================
+         REVIEWS
+    ============================== -->
 
-    <img src="images/logo.png" class="loader-logo">
+    <section class="reviews">
 
-</div>
+        <img
+            src="images/reviews-section.png"
+            alt="Отзывы покупателей"
+        >
 
-
-<div class="hero">
-
-    <div class="overlay"></div>
-
-
-    <div class="container">
-
-
-</div>
+    </section>
 
 
-</div>
-<section class="reviews">
+    <!-- ==============================
+         MUSIC
+    ============================== -->
 
-    <img src="images/reviews-section.png" alt="Отзывы покупателей">
+    <audio id="bgMusic" loop>
 
-</section>
+        <source
+            src="music/theme.mp3"
+            type="audio/mpeg"
+        >
 
-
-
-
-
-
-
+    </audio>
 
 
-<audio id="bgMusic" loop>
-    <source src="music/theme.mp3" type="audio/mpeg">
-</audio>
+    <button id="musicBtn" type="button">
+        ♫
+    </button>
 
-<button id="musicBtn">♫</button>
-<script src="script.js"></script>
 
-<section class="contacts-page" id="order">
+    <!-- ==============================
+         ORDER
+    ============================== -->
 
-    <div class="container">
+    <section class="contacts-page" id="order">
 
-        <h1>Заказать Нику</h1>
+        <div class="container">
 
-        <p class="contacts-subtitle">
-            Если вы хотите заказать статуэтку или у вас появились вопросы
-            по изготовлению и срокам, свяжитесь с нами любым удобным способом.
-        </p>
+            <h1>Заказать Нику</h1>
 
-        <div class="contacts-grid">
+            <p class="contacts-subtitle">
 
-            <div class="contact-card">
+                Если вы хотите заказать статуэтку или у вас появились вопросы
+                по изготовлению и срокам, свяжитесь с нами любым удобным способом.
 
-                <img src="images/telegram.png" class="contact-icon" alt="Telegram">
+            </p>
 
-                <p>@olegebk</p>
 
-                <a href="https://t.me/olegebk" target="_blank">
-                    Написать
-                </a>
+            <div class="contacts-grid">
 
-            </div>
 
-            <div class="contact-card">
+                <!-- TELEGRAM -->
 
-                <img src="images/max.png" class="contact-icon" alt="MAX">
+                <div class="contact-card">
 
-                <p>@olegebk</p>
+                    <img
+                        src="images/telegram.png"
+                        class="contact-icon"
+                        alt="Telegram"
+                    >
 
-                <a href="#">
-                    Написать
-                </a>
+                    <p>@olegebk</p>
 
-            </div>
+                    <a
+                        href="https://t.me/olegebk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Написать
+                    </a>
 
-            <div class="contact-card">
+                </div>
 
-                <h2>E-mail</h2>
 
-                <p>info@nika-truck.ru</p>
+                <!-- MAX -->
+
+                <div class="contact-card">
+
+                    <img
+                        src="images/max.png"
+                        class="contact-icon"
+                        alt="MAX"
+                    >
+
+                    <p>@olegebk</p>
+
+                    <a href="#">
+                        Написать
+                    </a>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <h2>E-mail</h2>
+
+                    <p>
+                        info@nika-truck.ru
+                    </p>
+
+                </div>
+
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
