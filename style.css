@@ -35,11 +35,11 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    padding-top: 80px;
 
     position: relative;
 
     background-image: url("images/hero.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,6 +59,7 @@ body {
 
 .overlay {
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -90,6 +91,7 @@ body {
 
 .loader {
     position: fixed;
+
     inset: 0;
 
     background: #000;
@@ -97,39 +99,62 @@ body {
     z-index: 9999;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     opacity: 1;
 
-    transition: opacity 1.2s ease;
+    /*
+        Логотип показывается 3 секунды,
+        затем плавно исчезает.
+    */
+
+    animation: loaderHide 1.2s ease 3s forwards;
+
+    pointer-events: none;
 }
 
 .loader-logo {
     width: 260px;
+
+    max-width: 70%;
 
     opacity: 0;
 
     animation: logoShow 1.5s ease forwards;
 }
 
-.loader.hide .loader-logo {
-    transform: scale(0.8);
-    opacity: 0;
-
-    transition: all 1s ease;
-}
-
 @keyframes logoShow {
+
     from {
         opacity: 0;
+
         transform: scale(0.8);
     }
 
     to {
         opacity: 1;
+
         transform: scale(1);
     }
+
+}
+
+@keyframes loaderHide {
+
+    from {
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+
+        visibility: hidden;
+    }
+
 }
 
 
@@ -149,6 +174,7 @@ body {
     text-decoration: none;
 
     font-size: 16px;
+
     letter-spacing: 1px;
 
     transition: 0.3s ease;
@@ -156,11 +182,13 @@ body {
 
 .btn-gold {
     background: #b58a3a;
+
     color: white;
 }
 
 .btn-gold:hover {
     background: #d4aa52;
+
     transform: translateY(-3px);
 }
 
@@ -183,7 +211,8 @@ body {
 }
 
 .header-container {
-    width: 20%;
+    width: 90%;
+
     max-width: 1200px;
 
     margin: 0 auto;
@@ -191,6 +220,7 @@ body {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 }
 
@@ -215,6 +245,7 @@ body {
     position: absolute;
 
     top: 35px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -328,6 +359,7 @@ body {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     padding: 80px 0;
@@ -349,172 +381,6 @@ body {
     transform: scale(1.01);
 
     box-shadow: 0 0 60px rgba(212,161,91,.35);
-}
-
-
-/* ==============================
-        ОСТАВИТЬ ОТЗЫВ
-============================== */
-
-.leave-review {
-    width: 100%;
-
-    background: #070707;
-
-    padding: 90px 20px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-}
-
-.leave-review h2 {
-    color: #d4a15b;
-
-    font-size: 42px;
-
-    margin-bottom: 45px;
-
-    text-align: center;
-}
-
-.leave-review input,
-.leave-review textarea {
-    width: 650px;
-
-    max-width: 90%;
-
-    background: #181818;
-
-    color: #fff;
-
-    border: 1px solid rgba(212,161,91,.35);
-
-    border-radius: 12px;
-
-    padding: 18px 22px;
-
-    font-size: 17px;
-
-    margin-bottom: 22px;
-
-    transition: .3s;
-}
-
-.leave-review textarea {
-    height: 170px;
-
-    resize: none;
-}
-
-.leave-review input:focus,
-.leave-review textarea:focus {
-    outline: none;
-
-    border-color: #d4a15b;
-
-    box-shadow: 0 0 20px rgba(212,161,91,.25);
-}
-
-#reviewBtn {
-    width: 280px;
-    height: 58px;
-
-    background: #d4a15b;
-
-    color: #111;
-
-    border: none;
-
-    border-radius: 10px;
-
-    font-size: 18px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-#reviewBtn:hover {
-    transform: translateY(-2px);
-
-    background: #e6bb7b;
-
-    box-shadow: 0 0 25px rgba(212,161,91,.35);
-}
-
-
-/* ==============================
-        МОДАЛЬНОЕ ОКНО
-============================== */
-
-.modal {
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0,0,0,.75);
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 99999;
-}
-
-.modal-content {
-    background: #111;
-
-    border: 1px solid #d4a15b;
-
-    border-radius: 15px;
-
-    padding: 35px;
-
-    text-align: center;
-
-    color: #fff;
-}
-
-.modal-content h3 {
-    color: #fff;
-
-    font-size: 24px;
-
-    font-weight: 600;
-
-    line-height: 1.5;
-
-    margin-bottom: 30px;
-}
-
-.modal-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 20px;
-}
-
-.modal-buttons button {
-    background: #d4a15b;
-
-    color: #111;
-
-    border: none;
-
-    padding: 12px 24px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
 }
 
 
@@ -614,7 +480,10 @@ body {
 .spec-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
 
     gap: 30px;
 }
@@ -677,7 +546,10 @@ body {
 .gallery-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
 
     gap: 25px;
 }
@@ -762,7 +634,10 @@ body {
 .contacts-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
 
     gap: 35px;
 
@@ -856,7 +731,9 @@ body {
     html,
     body {
         width: 100%;
+
         min-height: 100%;
+
         overflow-x: hidden;
     }
 
@@ -865,18 +742,17 @@ body {
 
     .hero {
         width: 100%;
+
         height: 100svh;
+
         min-height: 600px;
 
         padding-top: 0;
 
-        /*
-        На телефоне показываем ВСЮ фотографию,
-        а не обрезаем левую и правую части.
-        */
-
         background-size: contain;
+
         background-position: center center;
+
         background-repeat: no-repeat;
 
         background-color: #000;
@@ -892,6 +768,7 @@ body {
 
     .container {
         width: 92%;
+
         max-width: none;
     }
 
@@ -972,40 +849,6 @@ body {
         width: 92%;
 
         border-radius: 12px;
-    }
-
-
-    /* ОСТАВИТЬ ОТЗЫВ */
-
-    .leave-review {
-        padding: 55px 15px;
-    }
-
-    .leave-review h2 {
-        font-size: 30px;
-
-        margin-bottom: 30px;
-    }
-
-    .leave-review input,
-    .leave-review textarea {
-        width: 100%;
-
-        max-width: 100%;
-
-        font-size: 16px;
-
-        padding: 15px 17px;
-    }
-
-    .leave-review textarea {
-        height: 140px;
-    }
-
-    #reviewBtn {
-        width: 100%;
-
-        max-width: 280px;
     }
 
 
@@ -1146,4 +989,5 @@ body {
 
         word-break: break-word;
     }
+
 }
