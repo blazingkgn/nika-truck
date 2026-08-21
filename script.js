@@ -40,22 +40,7 @@ musicBtn.addEventListener("click", function () {
     isPlaying = !isPlaying;
 
 });
-/*==============================
-      ОТЗЫВЫ
-==============================*/
 
-const reviewBtn = document.getElementById("reviewBtn");
-const authModal = document.getElementById("authModal");
-const closeModal = document.getElementById("closeModal");
-const loginBtn = document.getElementById("loginBtn");
-
-if (reviewBtn && authModal) {
-
-    reviewBtn.addEventListener("click", function () {
-
-        authModal.style.display = "flex";
-
-    });
 
 }
 
