@@ -1,70 +1,164 @@
-document.addEventListener("DOMContentLoaded", function () {
+<!DOCTYPE html>
+<html lang="ru">
 
-    /* ==============================
-       LOADER
-    ============================== */
+<head>
 
-    const loader = document.querySelector(".loader");
+<meta charset="UTF-8">
 
-    if (loader) {
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        setTimeout(function () {
+<title>NIKA TRUCK</title>
 
-            loader.classList.add("hide");
-            loader.style.opacity = "0";
+<link rel="stylesheet" href="style.css">
 
-            setTimeout(function () {
-
-                loader.style.display = "none";
-
-            }, 1200);
-
-        }, 3000);
-
-    }
+</head>
 
 
-    /* ==============================
-       MUSIC
-    ============================== */
+<body>
+    <header class="header">
 
-    const music = document.getElementById("bgMusic");
-    const musicBtn = document.getElementById("musicBtn");
 
-    if (music && musicBtn) {
+    <div class="header-container">
 
-        let isPlaying = false;
 
-        musicBtn.addEventListener("click", function () {
+        
 
-            if (isPlaying) {
 
-                music.pause();
+        <nav class="menu">
 
-                musicBtn.innerHTML = "♫";
+    <a href="about.html">О статуэтке</a>
 
-                isPlaying = false;
+    <a href="#gallery">Галерея</a>
 
-            } else {
+    <a href="#order">Заказать Нику</a>
 
-                music.play()
-                    .then(function () {
 
-                        musicBtn.innerHTML = "❚❚";
 
-                        isPlaying = true;
+</nav>
 
-                    })
-                    .catch(function (error) {
 
-                        console.log("Ошибка музыки:", error);
+    </div>
 
-                    });
 
-            }
+</header>
 
-        });
 
-    }
+<div class="loader">
 
-});
+    <img src="images/logo.png" class="loader-logo">
+
+</div>
+
+
+<div class="hero">
+
+    <div class="overlay"></div>
+
+
+    <div class="container">
+
+
+</div>
+
+
+</div>
+<section class="reviews">
+
+    <img src="images/reviews-section.png" alt="Отзывы покупателей">
+
+</section>
+<section class="leave-review">
+
+    <h2>Оставить отзыв</h2>
+
+    <input type="text" placeholder="Ваше имя">
+
+    <textarea placeholder="Ваш отзыв"></textarea>
+
+    <button id="reviewBtn">Отправить отзыв</button>
+
+</section>
+
+
+<div class="modal" id="authModal">
+
+    <div class="modal-content">
+
+        <h3>Для продолжения необходимо авторизоваться</h3>
+
+        <div class="modal-buttons">
+
+            <button id="loginBtn">Войти</button>
+
+            <button id="closeModal">Отмена</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<audio id="bgMusic" loop>
+    <source src="music/theme.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">♫</button>
+<script src="script.js"></script>
+
+<section class="contacts-page" id="order">
+
+    <div class="container">
+
+        <h1>Заказать Нику</h1>
+
+        <p class="contacts-subtitle">
+            Если вы хотите заказать статуэтку или у вас появились вопросы
+            по изготовлению и срокам, свяжитесь с нами любым удобным способом.
+        </p>
+
+        <div class="contacts-grid">
+
+            <div class="contact-card">
+
+                <img src="images/telegram.png" class="contact-icon" alt="Telegram">
+
+                <p>@olegebk</p>
+
+                <a href="https://t.me/olegebk" target="_blank">
+                    Написать
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <img src="images/max.png" class="contact-icon" alt="MAX">
+
+                <p>@olegebk</p>
+
+                <a href="#">
+                    Написать
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h2>E-mail</h2>
+
+                <p>info@nika-truck.ru</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+
+</html>
