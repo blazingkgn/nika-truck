@@ -15,15 +15,7 @@ html {
 }
 
 body {
-    background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-        url("images/hero.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-
+    background: #000;
     color: white;
 }
 
@@ -35,19 +27,21 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
+    height: 100svh;
+
+    min-height: 600px;
 
     position: relative;
 
-    background-image: url("images/hero.jpg");
+    overflow: hidden;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #000;
 
     animation: showHero 1.5s ease;
 }
 
 @keyframes showHero {
+
     from {
         opacity: 0;
     }
@@ -55,18 +49,100 @@ body {
     to {
         opacity: 1;
     }
+
 }
+
+
+/* ==============================
+        ЗАТЕМНЕНИЕ
+============================== */
 
 .overlay {
     position: absolute;
 
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
 
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+        КАМАЗ
+============================== */
+
+.hero-kamaz {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* ==============================
+        СТАТУЭТКА НИКА
+============================== */
+
+.hero-nika {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 45%;
+
+    max-width: 600px;
+
+    height: auto;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* ==============================
+        ЛОГОТИП НА САЙТЕ
+============================== */
+
+.hero-logo {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 230px;
+
+    height: auto;
+
+    top: 110px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    user-select: none;
 }
 
 
@@ -76,11 +152,13 @@ body {
 
 .container {
     width: 90%;
+
     max-width: 1200px;
 
     margin: 0 auto;
 
     position: relative;
+
     z-index: 2;
 }
 
@@ -738,7 +816,9 @@ body {
     }
 
 
-    /* ГЛАВНЫЙ ФОН */
+    /* ==============================
+            ГЛАВНЫЙ ЭКРАН
+    ============================== */
 
     .hero {
         width: 100%;
@@ -747,24 +827,61 @@ body {
 
         min-height: 600px;
 
-        padding-top: 0;
-
-        background-size: contain;
-
-        background-position: center center;
-
-        background-repeat: no-repeat;
-
-        background-color: #000;
+        background: #000;
     }
 
+
+    /* ЗАТЕМНЕНИЕ */
 
     .overlay {
         background: rgba(0,0,0,.25);
     }
 
 
-    /* КОНТЕЙНЕР */
+    /* КАМАЗ */
+
+    .hero-kamaz {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* НИКА */
+
+    .hero-nika {
+        width: 65%;
+
+        max-width: 420px;
+
+        left: 50%;
+
+        top: 52%;
+
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* ЛОГОТИП */
+
+    .hero-logo {
+        width: 180px;
+
+        top: 95px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    /* ==============================
+            КОНТЕЙНЕР
+    ============================== */
 
     .container {
         width: 92%;
@@ -773,7 +890,9 @@ body {
     }
 
 
-    /* МЕНЮ */
+    /* ==============================
+            МЕНЮ
+    ============================== */
 
     .menu {
         top: 22px;
@@ -802,7 +921,9 @@ body {
     }
 
 
-    /* КНОПКИ */
+    /* ==============================
+            КНОПКИ
+    ============================== */
 
     .hero-buttons {
         margin-top: 25px;
@@ -815,7 +936,9 @@ body {
     }
 
 
-    /* МУЗЫКА */
+    /* ==============================
+            МУЗЫКА
+    ============================== */
 
     #musicBtn {
         right: 15px;
@@ -830,7 +953,9 @@ body {
     }
 
 
-    /* LOADER */
+    /* ==============================
+            LOADER
+    ============================== */
 
     .loader-logo {
         width: 200px;
@@ -839,7 +964,9 @@ body {
     }
 
 
-    /* ОТЗЫВЫ */
+    /* ==============================
+            ОТЗЫВЫ
+    ============================== */
 
     .reviews {
         padding: 45px 0;
@@ -852,7 +979,9 @@ body {
     }
 
 
-    /* ABOUT */
+    /* ==============================
+            ABOUT
+    ============================== */
 
     .about-page {
         padding: 110px 15px 50px;
@@ -891,7 +1020,9 @@ body {
     }
 
 
-    /* ХАРАКТЕРИСТИКИ */
+    /* ==============================
+            ХАРАКТЕРИСТИКИ
+    ============================== */
 
     .specs {
         padding: 55px 15px;
@@ -918,7 +1049,9 @@ body {
     }
 
 
-    /* ГАЛЕРЕЯ */
+    /* ==============================
+            ГАЛЕРЕЯ
+    ============================== */
 
     .gallery-page {
         padding: 55px 15px;
@@ -941,7 +1074,9 @@ body {
     }
 
 
-    /* НАЗАД */
+    /* ==============================
+            НАЗАД
+    ============================== */
 
     .back-home {
         padding: 50px 15px;
@@ -952,7 +1087,9 @@ body {
     }
 
 
-    /* ЗАКАЗАТЬ НИКУ */
+    /* ==============================
+            ЗАКАЗАТЬ НИКУ
+    ============================== */
 
     .contacts-page {
         padding: 110px 15px 60px;
@@ -988,6 +1125,33 @@ body {
         font-size: 17px;
 
         word-break: break-word;
+    }
+
+}
+
+
+/* ==============================
+        ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ
+============================== */
+
+@media (max-width: 400px) {
+
+    .hero-nika {
+        width: 70%;
+    }
+
+    .hero-logo {
+        width: 160px;
+
+        top: 90px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 11px;
     }
 
 }
