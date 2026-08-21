@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
 
 
-    // Кнопка отзывов
     const reviewBtn = document.getElementById("reviewBtn");
     const authModal = document.getElementById("authModal");
     const closeModal = document.getElementById("closeModal");
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Музыка
     const music = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicBtn");
 
