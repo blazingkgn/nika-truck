@@ -27,29 +27,65 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    height: 100svh;
-
     min-height: 600px;
 
     position: relative;
-
     overflow: hidden;
 
-    background: #000;
-
-    animation: showHero 1.5s ease;
+    background: #111;
 }
 
-@keyframes showHero {
+.hero-kamaz {
+    position: absolute;
 
-    from {
-        opacity: 0;
-    }
+    width: 100%;
+    height: 100%;
 
-    to {
-        opacity: 1;
-    }
+    object-fit: contain;
 
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+}
+
+.hero-nika {
+    position: absolute;
+
+    width: 45%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+}
+
+.hero-logo {
+    position: absolute;
+
+    width: 230px;
+
+    left: 50%;
+    top: 100px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.15);
+
+    z-index: 4;
 }
 
 
