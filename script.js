@@ -1,76 +1,69 @@
-setTimeout(function(){
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==============================
+       LOADER
+    ============================== */
 
     const loader = document.querySelector(".loader");
 
+    if (loader) {
 
-    loader.classList.add("hide");
+        setTimeout(function () {
 
+            loader.classList.add("hide");
+            loader.style.opacity = "0";
 
-    loader.style.opacity="0";
+            setTimeout(function () {
 
+                loader.style.display = "none";
 
-    setTimeout(function(){
+            }, 1200);
 
-        loader.style.display="none";
-
-    },1200);
-
-
-},3000);
-
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
-
-let isPlaying = false;
-
-musicBtn.addEventListener("click", function () {
-
-    if (isPlaying) {
-
-        music.pause();
-        musicBtn.innerHTML = "♫";
-
-    } else {
-
-       music.play().catch(error => console.log(error));
-        musicBtn.innerHTML = "❚❚";
+        }, 3000);
 
     }
 
-    isPlaying = !isPlaying;
 
-});
+    /* ==============================
+       MUSIC
+    ============================== */
 
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
 
-}
+    if (music && musicBtn) {
 
-if (closeModal) {
+        let isPlaying = false;
 
-    closeModal.addEventListener("click", function () {
+        musicBtn.addEventListener("click", function () {
 
-        authModal.style.display = "none";
+            if (isPlaying) {
 
-    });
+                music.pause();
 
-}
+                musicBtn.innerHTML = "♫";
 
-if (loginBtn) {
+                isPlaying = false;
 
-    loginBtn.addEventListener("click", function () {
+            } else {
 
-        alert("Для продолжения необходимо авторизоваться.");
+                music.play()
+                    .then(function () {
 
-        authModal.style.display = "none";
+                        musicBtn.innerHTML = "❚❚";
 
-    });
+                        isPlaying = true;
 
-}
+                    })
+                    .catch(function (error) {
 
-window.addEventListener("click", function (e) {
+                        console.log("Ошибка музыки:", error);
 
-    if (e.target === authModal) {
+                    });
 
-        authModal.style.display = "none";
+            }
+
+        });
 
     }
 
