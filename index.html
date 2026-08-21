@@ -5,16 +5,23 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>NIKA TRUCK</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
 
 <body>
+
 
     <!-- ==============================
          HEADER
@@ -26,11 +33,17 @@
 
             <nav class="menu">
 
-                <a href="about.html">О статуэтке</a>
+                <a href="about.html">
+                    О статуэтке
+                </a>
 
-                <a href="#gallery">Галерея</a>
+                <a href="#gallery">
+                    Галерея
+                </a>
 
-                <a href="#order">Заказать Нику</a>
+                <a href="#order">
+                    Заказать Нику
+                </a>
 
             </nav>
 
@@ -39,8 +52,10 @@
     </header>
 
 
+
     <!-- ==============================
          LOADER
+         logo.png — заставка при входе
     ============================== -->
 
     <div class="loader">
@@ -54,19 +69,42 @@
     </div>
 
 
+
     <!-- ==============================
          HERO
     ============================== -->
 
     <section class="hero">
 
+        <!-- Затемнение -->
         <div class="overlay"></div>
 
-        <div class="container">
 
-        </div>
+        <!-- КамАЗ -->
+        <img
+            src="images/kamaz.png"
+            class="hero-kamaz"
+            alt="КамАЗ"
+        >
+
+
+        <!-- Статуэтка Ника -->
+        <img
+            src="images/nika.png"
+            class="hero-nika"
+            alt="Статуэтка Ника"
+        >
+
+
+        <!-- Логотип на самом сайте -->
+        <img
+            src="images/site-logo.png"
+            class="hero-logo"
+            alt="NIKA TRUCK"
+        >
 
     </section>
+
 
 
     <!-- ==============================
@@ -83,11 +121,15 @@
     </section>
 
 
+
     <!-- ==============================
          MUSIC
     ============================== -->
 
-    <audio id="bgMusic" loop>
+    <audio
+        id="bgMusic"
+        loop
+    >
 
         <source
             src="music/theme.mp3"
@@ -97,33 +139,50 @@
     </audio>
 
 
-    <button id="musicBtn" type="button">
+    <button
+        id="musicBtn"
+        type="button"
+        aria-label="Включить или выключить музыку"
+    >
         ♫
     </button>
+
 
 
     <!-- ==============================
          ORDER
     ============================== -->
 
-    <section class="contacts-page" id="order">
+    <section
+        class="contacts-page"
+        id="order"
+    >
 
         <div class="container">
 
-            <h1>Заказать Нику</h1>
+
+            <h1>
+                Заказать Нику
+            </h1>
+
 
             <p class="contacts-subtitle">
 
-                Если вы хотите заказать статуэтку или у вас появились вопросы
-                по изготовлению и срокам, свяжитесь с нами любым удобным способом.
+                Если вы хотите заказать статуэтку
+                или у вас появились вопросы
+                по изготовлению и срокам,
+                свяжитесь с нами любым удобным способом.
 
             </p>
+
 
 
             <div class="contacts-grid">
 
 
-                <!-- TELEGRAM -->
+                <!-- ==============================
+                     TELEGRAM
+                ============================== -->
 
                 <div class="contact-card">
 
@@ -133,7 +192,9 @@
                         alt="Telegram"
                     >
 
-                    <p>@olegebk</p>
+                    <p>
+                        @olegebk
+                    </p>
 
                     <a
                         href="https://t.me/olegebk"
@@ -146,7 +207,10 @@
                 </div>
 
 
-                <!-- MAX -->
+
+                <!-- ==============================
+                     MAX
+                ============================== -->
 
                 <div class="contact-card">
 
@@ -156,7 +220,9 @@
                         alt="MAX"
                     >
 
-                    <p>@olegebk</p>
+                    <p>
+                        @olegebk
+                    </p>
 
                     <a href="#">
                         Написать
@@ -165,11 +231,16 @@
                 </div>
 
 
-                <!-- EMAIL -->
+
+                <!-- ==============================
+                     EMAIL
+                ============================== -->
 
                 <div class="contact-card">
 
-                    <h2>E-mail</h2>
+                    <h2>
+                        E-mail
+                    </h2>
 
                     <p>
                         info@nika-truck.ru
@@ -185,11 +256,13 @@
     </section>
 
 
+
     <!-- ==============================
          JAVASCRIPT
     ============================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
