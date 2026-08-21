@@ -993,14 +993,229 @@ html {
 }
 @media (max-width: 768px) {
 
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+
     .hero {
         width: 100%;
-        height: 100vh;
+        min-height: 100svh;
+        height: 100svh;
+        padding-top: 0;
 
         background-size: cover;
-        background-position: center 25%;
+        background-position: center center;
         background-repeat: no-repeat;
     }
 
-}
+    .container {
+        width: 92%;
+        max-width: none;
+    }
+
+    /* МЕНЮ */
+
+    .menu {
+        top: 22px;
+        left: 50%;
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 13px;
+        letter-spacing: .7px;
+    }
+
+    /* КНОПКИ */
+
+    .hero-buttons {
+        margin-top: 25px;
+    }
+
+    .btn {
+        padding: 13px 24px;
+        font-size: 14px;
+    }
+
+    /* МУЗЫКА */
+
+    #musicBtn {
+        right: 15px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+    }
+
+    /* LOADER */
+
+    .loader-logo {
+        width: 200px;
+        max-width: 70%;
+    }
+
+    /* ОТЗЫВЫ */
+
+    .reviews {
+        padding: 45px 0;
+    }
+
+    .reviews img {
+        width: 92%;
+        border-radius: 12px;
+    }
+
+    /* ОСТАВИТЬ ОТЗЫВ */
+
+    .leave-review {
+        padding: 55px 15px;
+    }
+
+    .leave-review h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .leave-review input,
+    .leave-review textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        padding: 15px 17px;
+    }
+
+    .leave-review textarea {
+        height: 140px;
+    }
+
+    #reviewBtn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* ABOUT */
+
+    .about-page {
+        padding: 110px 15px 50px;
+    }
+
+    .about-page h1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .about-photo {
+        margin-bottom: 35px;
+    }
+
+    .about-photo img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .about-text {
+        padding: 25px 20px;
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: left;
+        border-radius: 15px;
+    }
+
+    .about-text p {
+        margin-bottom: 22px;
+    }
+
+    /* ХАРАКТЕРИСТИКИ */
+
+    .specs {
+        padding: 55px 15px;
+    }
+
+    .specs h2 {
+        font-size: 34px;
+        margin-bottom: 35px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .spec-card {
+        padding: 25px;
+    }
+
+    .spec-card p {
+        font-size: 24px;
+    }
+
+    /* ГАЛЕРЕЯ */
+
+    .gallery-page {
+        padding: 55px 15px;
+    }
+
+    .gallery-page h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-grid img {
+        border-radius: 12px;
+    }
+
+    /* КНОПКА НАЗАД */
+
+    .back-home {
+        padding: 50px 15px;
+    }
+
+    .btn-back {
+        padding: 15px 35px;
+    }
+
+    /* КОНТАКТЫ */
+
+    .contacts-page {
+        padding: 110px 15px 60px;
+    }
+
+    .contacts-page h1 {
+        font-size: 40px;
+    }
+
+    .contacts-subtitle {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-card h2 {
+        font-size: 25px;
+    }
+
+    .contact-card p {
+        font-size: 17px;
+    }
+
 }
