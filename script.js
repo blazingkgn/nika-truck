@@ -1,53 +1,81 @@
-setTimeout(function(){
+/* =========================================
+        ЗАГРУЗОЧНЫЙ ЭКРАН
+========================================= */
+
+setTimeout(function () {
 
     const loader = document.querySelector(".loader");
 
+    if (!loader) {
+        return;
+    }
 
     loader.classList.add("hide");
 
+    loader.style.opacity = "0";
 
-    loader.style.opacity="0";
+    setTimeout(function () {
+
+        loader.style.display = "none";
+
+    }, 1200);
+
+}, 3000);
 
 
-    setTimeout(function(){
-
-        loader.style.display="none";
-
-    },1200);
-
-
-},3000);
+/* =========================================
+        МУЗЫКА
+========================================= */
 
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
 let isPlaying = false;
 
-musicBtn.addEventListener("click", function () {
+if (music && musicBtn) {
 
-    if (isPlaying) {
+    musicBtn.addEventListener("click", function () {
 
-        music.pause();
-        musicBtn.innerHTML = "♫";
+        if (isPlaying) {
 
-    } else {
+            music.pause();
 
-       music.play().catch(error => console.log(error));
-        musicBtn.innerHTML = "❚❚";
+            musicBtn.innerHTML = "♫";
 
-    }
+            isPlaying = false;
 
-    isPlaying = !isPlaying;
+        } else {
 
-});
-/*==============================
-      ОТЗЫВЫ
-==============================*/
+            music.play()
+                .then(function () {
+
+                    musicBtn.innerHTML = "❚❚";
+
+                    isPlaying = true;
+
+                })
+                .catch(function (error) {
+
+                    console.log(error);
+
+                });
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+        ОТЗЫВЫ
+========================================= */
 
 const reviewBtn = document.getElementById("reviewBtn");
 const authModal = document.getElementById("authModal");
 const closeModal = document.getElementById("closeModal");
 const loginBtn = document.getElementById("loginBtn");
+
 
 if (reviewBtn && authModal) {
 
@@ -59,7 +87,8 @@ if (reviewBtn && authModal) {
 
 }
 
-if (closeModal) {
+
+if (closeModal && authModal) {
 
     closeModal.addEventListener("click", function () {
 
@@ -69,11 +98,14 @@ if (closeModal) {
 
 }
 
-if (loginBtn) {
+
+if (loginBtn && authModal) {
 
     loginBtn.addEventListener("click", function () {
 
-        alert("Для продолжения необходимо авторизоваться.");
+        alert(
+            "Для продолжения необходимо авторизоваться."
+        );
 
         authModal.style.display = "none";
 
@@ -81,9 +113,13 @@ if (loginBtn) {
 
 }
 
-window.addEventListener("click", function (e) {
 
-    if (e.target === authModal) {
+window.addEventListener("click", function (event) {
+
+    if (
+        authModal &&
+        event.target === authModal
+    ) {
 
         authModal.style.display = "none";
 
