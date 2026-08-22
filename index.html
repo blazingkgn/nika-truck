@@ -1,219 +1,618 @@
-<!DOCTYPE html>
-<html lang="ru">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
 
-    <title>NIKA TRUCK</title>
+html {
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    background:
+        linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+        url("images/hero.jpg");
 
-<body>
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
-<header class="header">
+    color: white;
+}
 
-    <div class="header-container">
 
-        <nav class="menu">
+/* =========================================
+        HERO
+========================================= */
 
-            <a href="about.html">О статуэтке</a>
+.hero {
+    position: relative;
 
-            <a href="#order">Заказать Нику</a>
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
 
-        </nav>
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    </div>
+    overflow: hidden;
+}
 
-</header>
 
+/* Затемнение фоновой картинки */
 
-<!-- ЗАГРУЗОЧНЫЙ ЭКРАН -->
+.hero .overlay {
+    position: absolute;
 
-<div class="loader">
+    inset: 0;
 
-    <img
-        src="images/logo.png"
-        class="loader-logo"
-        alt="NIKA TRUCK"
-    >
+    width: 100%;
+    height: 100%;
 
-</div>
+    background: rgba(0, 0, 0, 0.60);
 
+    z-index: 1;
+}
 
-<!-- HERO -->
 
-<div class="hero">
+/* Контейнер HERO */
 
-    <div class="overlay"></div>
+.hero .container {
+    position: relative;
 
-    <div class="container">
+    width: 100%;
+    height: 100%;
 
-        <img
-            src="images/nika.png"
-            class="nika-hero"
-            alt="Ника"
-        >
+    max-width: 1200px;
 
-        <img
-            src="images/header-logo.png"
-            class="hero-logo"
-            alt="NIKA TRUCK"
-        >
+    margin: 0 auto;
+    padding: 0 30px;
 
-    </div>
+    z-index: 2;
+}
 
-</div>
 
+/* =========================================
+        ЛОГОТИП С ТЕКСТОМ (ОДНА КАРТИНКА) СЛЕВА
+========================================= */
 
-<!-- ОТЗЫВЫ -->
+.hero .hero-logo {
+    position: absolute;
 
-<section class="reviews">
+    left: -30vw;
+    top: 50%;
+    transform: translateY(-50%);
 
-    <img
-        src="images/reviews-section.png"
-        alt="Отзывы покупателей"
-    >
+    width: 1050px;
+    height: auto;
 
-</section>
+    z-index: 3;
 
+    display: block;
 
+    pointer-events: none;
+}
 
 
+/* =========================================
+        СТАТУЭТКА СПРАВА
+========================================= */
 
-<!-- МОДАЛЬНОЕ ОКНО -->
+.hero .nika-hero {
+    position: absolute;
 
-<div class="modal" id="authModal">
+    right: -25vw;
+    bottom: 0;
 
-    <div class="modal-content">
+    width: 50vw;
+    max-width: none;
 
-        <h3>
-            Для продолжения необходимо авторизоваться
-        </h3>
+    height: auto;
 
-        <div class="modal-buttons">
+    z-index: 3;
 
-            <button id="loginBtn">
-                Войти
-            </button>
+    display: block;
 
-            <button id="closeModal">
-                Отмена
-            </button>
+    object-fit: contain;
 
-        </div>
+    pointer-events: none;
+}
 
-    </div>
 
-</div>
+/* =========================================
+        ВЕРХНЕЕ МЕНЮ
+========================================= */
 
+.header {
+    position: absolute;
 
-<!-- МУЗЫКА -->
+    top: 0;
+    left: 0;
 
-<audio id="bgMusic" loop>
+    width: 100%;
 
-    <source
-        src="music/theme.mp3"
-        type="audio/mpeg"
-    >
+    padding: 25px 0;
 
-</audio>
+    z-index: 10;
+}
 
-<button id="musicBtn">
-    ♫
-</button>
 
+.header-container {
+    width: 100%;
+    max-width: 1200px;
 
-<!-- ЗАКАЗАТЬ НИКУ -->
+    height: 80px;
 
-<section class="contacts-page" id="order">
+    margin: 0 auto;
 
-    <div class="container">
+    position: relative;
+}
 
-        <h1>
-            Заказать Нику
-        </h1>
 
-        <p class="contacts-subtitle">
+/* Меню */
 
-            Если вы хотите заказать статуэтку
-            или у вас появились вопросы
-            по изготовлению и срокам,
-            свяжитесь с нами любым удобным способом.
+.menu {
+    position: absolute;
 
-        </p>
+    top: 35px;
+    left: 50%;
 
-        <div class="contacts-grid">
+    transform: translateX(-50%);
 
-            <!-- TELEGRAM -->
+    display: flex;
 
-            <div class="contact-card">
+    gap: 45px;
 
-                <img
-                    src="images/telegram.png"
-                    class="contact-icon"
-                    alt="Telegram"
-                >
+    z-index: 100;
+}
 
-                <p>
-                    @olegebk
-                </p>
 
-                <a
-                    href="https://t.me/olegebk"
-                    target="_blank"
-                >
-                    Написать
-                </a>
+.menu a {
+    color: #d6b07b;
 
-            </div>
+    text-decoration: none;
 
+    font-size: 18px;
 
-            <!-- MAX -->
+    font-weight: 600;
 
-            <div class="contact-card">
+    letter-spacing: 1px;
 
-                <img
-                    src="images/max.png"
-                    class="contact-icon"
-                    alt="MAX"
-                >
+    transition: .35s;
 
-                <p>
-                    @olegebk
-                </p>
+    position: relative;
 
-                <a href="#">
-                    Написать
-                </a>
+    text-transform: uppercase;
+}
 
-            </div>
 
+.menu a::after {
+    content: "";
 
-            <!-- EMAIL -->
+    position: absolute;
 
-            <div class="contact-card">
+    left: 0;
+    bottom: -8px;
 
-                <h2>
-                    E-mail
-                </h2>
+    width: 0;
+    height: 2px;
 
-                <p>
-                    info@nika-truck.ru
-                </p>
+    background: #d6b07b;
 
-            </div>
+    transition: .35s;
+}
 
-        </div>
 
-    </div>
+.menu a:hover {
+    color: #ffd38a;
 
-</section>
+    text-shadow:
+        0 0 8px rgba(255, 180, 70, .7),
+        0 0 18px rgba(255, 180, 70, .4);
+}
 
 
-<script src="script.js"></script>
+.menu a:hover::after {
+    width: 100%;
+}
 
-</body>
 
-</html>
+/* =========================================
+        ЗАГРУЗОЧНЫЙ ЭКРАН
+========================================= */
+
+.loader {
+    position: fixed;
+
+    inset: 0;
+
+    background: #000;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+
+    transition: opacity 1.2s ease;
+}
+
+
+.loader-logo {
+    width: 260px;
+
+    opacity: 0;
+
+    animation: logoShow 1.5s ease forwards;
+}
+
+
+.loader.hide .loader-logo {
+    transform: scale(.8);
+
+    opacity: 0;
+
+    transition: all 1s ease;
+}
+
+
+@keyframes logoShow {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================
+        МУЗЫКА
+========================================= */
+
+#musicBtn {
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(20, 20, 20, .75);
+
+    color: #d8b06b;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    z-index: 9999;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 0 15px rgba(216, 176, 107, .25);
+}
+
+
+#musicBtn:hover {
+    transform: scale(1.08);
+
+    color: #ffd27f;
+
+    box-shadow: 0 0 25px rgba(255, 210, 127, .7);
+}
+
+
+/* =========================================
+        ОТЗЫВЫ
+========================================= */
+
+.reviews {
+    width: 100%;
+
+    background: #050505;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 0;
+}
+
+
+.reviews img {
+    width: min(1400px, 95%);
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 40px rgba(212, 161, 91, .18);
+
+    transition: .35s;
+}
+
+
+.reviews img:hover {
+    transform: scale(1.01);
+
+    box-shadow: 0 0 60px rgba(212, 161, 91, .35);
+}
+
+
+/* =========================================
+        КОНТАКТЫ
+========================================= */
+
+.contacts-page {
+    padding: 160px 20px 100px;
+    background: rgba(0, 0, 0, .7);
+}
+
+.contacts-page h1 {
+    text-align: center;
+    font-size: 58px;
+    color: #d6b07b;
+    margin-bottom: 20px;
+}
+
+.contacts-subtitle {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: rgba(15, 15, 15, .8);
+    border: 1px solid rgba(214, 176, 123, .25);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: .35s;
+    backdrop-filter: blur(8px);
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(214, 176, 123, .25);
+}
+
+.contact-card h2 {
+    color: #d6b07b;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contact-card p {
+    color: #d0d0d0;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-card a {
+    display: inline-block;
+    padding: 14px 34px;
+    background: #d6b07b;
+    color: #111;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.contact-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(214, 176, 123, .35);
+}
+
+.contact-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+        МОДАЛЬНОЕ ОКНО
+========================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.modal-content {
+    background: #111;
+    border: 1px solid #d4a15b;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-content h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    background: #d4a15b;
+    color: #111;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+        АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНА
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* ----- МЕНЮ ----- */
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .menu {
+        gap: 18px;
+        top: 25px;
+    }
+
+    .menu a {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    /* ----- ЛОГОТИП (ОДНА КАРТИНКА) СЛЕВА (ТЕЛЕФОН) ----- */
+
+    .hero .hero-logo {
+        left: -60vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1200px;
+    }
+
+    /* ----- СТАТУЭТКА СПРАВА (ТЕЛЕФОН) ----- */
+
+    .hero .nika-hero {
+        right: -45vw;
+        width: 80vw;
+        bottom: -5%;
+    }
+
+    /* ----- ОТЗЫВЫ (ТЕЛЕФОН) ----- */
+
+    .reviews {
+        padding: 50px 15px;
+    }
+
+    .reviews img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* ----- КОНТАКТЫ (ТЕЛЕФОН) ----- */
+
+    .contacts-page {
+        padding: 100px 15px 60px;
+    }
+
+    .contacts-page h1 {
+        font-size: 38px;
+    }
+
+    .contacts-subtitle {
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-card {
+        padding: 30px;
+    }
+
+    .contact-card h2 {
+        font-size: 24px;
+    }
+
+    .contact-card p {
+        font-size: 17px;
+    }
+
+    /* ----- МУЗЫКА (ТЕЛЕФОН) ----- */
+
+    #musicBtn {
+        right: 15px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+/* Очень маленькие экраны (до 480px) */
+
+@media (max-width: 480px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .hero .hero-logo {
+        left: -70vw;
+        width: 1400px;
+    }
+
+    .hero .nika-hero {
+        right: -55vw;
+        width: 90vw;
+    }
+}
