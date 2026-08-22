@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NIKA TRUCK</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+    <div class="header-container">
+
+        <nav class="menu">
+
+            <a href="about.html">О статуэтке</a>
+
+            <a href="#gallery">Галерея</a>
+
+            <a href="#order">Заказать Нику</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ==============================
+     ЗАГРУЗОЧНЫЙ ЭКРАН
+============================== -->
+
+<div class="loader">
+
+    <img src="images/logo.png" class="loader-logo" alt="NIKA TRUCK">
+
+</div>
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<div class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <img src="images/nika.png" class="nika-hero" alt="Ника">
+
+        <img src="images/header-logo.png" class="hero-logo" alt="NIKA TRUCK">
+
+    </div>
+
+</div>
+
+
+<!-- ==============================
+     ОТЗЫВЫ
+============================== -->
+
+<section class="reviews">
+
+    <img src="images/reviews-section.png" alt="Отзывы покупателей">
+
+</section>
+
+
+<!-- ==============================
+     ОСТАВИТЬ ОТЗЫВ
+============================== -->
+
+<section class="leave-review">
+
+    <h2>Оставить отзыв</h2>
+
+    <input
+        type="text"
+        placeholder="Ваше имя"
+    >
+
+    <textarea
+        placeholder="Ваш отзыв"
+    ></textarea>
+
+    <button id="reviewBtn">
+        Отправить отзыв
+    </button>
+
+</section>
+
+
+<!-- ==============================
+     МОДАЛЬНОЕ ОКНО
+============================== -->
+
+<div class="modal" id="authModal">
+
+    <div class="modal-content">
+
+        <h3>
+            Для продолжения необходимо авторизоваться
+        </h3>
+
+        <div class="modal-buttons">
+
+            <button id="loginBtn">
+                Войти
+            </button>
+
+            <button id="closeModal">
+                Отмена
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==============================
+     МУЗЫКА
+============================== -->
+
+<audio id="bgMusic" loop>
+
+    <source
+        src="music/theme.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+<button id="musicBtn">
+    ♫
+</button>
+
+
+<!-- ==============================
+     JAVASCRIPT
+============================== -->
+
+<script src="script.js"></script>
+
+
+<!-- ==============================
+     ЗАКАЗАТЬ НИКУ
+============================== -->
+
+<section class="contacts-page" id="order">
+
+    <div class="container">
+
+        <h1>
+            Заказать Нику
+        </h1>
+
+        <p class="contacts-subtitle">
+
+            Если вы хотите заказать статуэтку
+            или у вас появились вопросы
+            по изготовлению и срокам,
+            свяжитесь с нами любым удобным способом.
+
+        </p>
+
+        <div class="contacts-grid">
+
+
+            <div class="contact-card">
+
+                <img
+                    src="images/telegram.png"
+                    class="contact-icon"
+                    alt="Telegram"
+                >
+
+                <p>
+                    @olegebk
+                </p>
+
+                <a
+                    href="https://t.me/olegebk"
+                    target="_blank"
+                >
+                    Написать
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <img
+                    src="images/max.png"
+                    class="contact-icon"
+                    alt="MAX"
+                >
+
+                <p>
+                    @olegebk
+                </p>
+
+                <a href="#">
+                    Написать
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h2>
+                    E-mail
+                </h2>
+
+                <p>
+                    info@nika-truck.ru
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>
